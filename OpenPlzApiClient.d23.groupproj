@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C4C5503F-906E-4389-A294-FD2812688267}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="packages\d23\OpenPlzApi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="test\dunitx\OpenPlzApi.UnitTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OpenPlzApi">
+        <MSBuild Projects="packages\d23\OpenPlzApi.dproj"/>
+    </Target>
+    <Target Name="OpenPlzApi:Clean">
+        <MSBuild Projects="packages\d23\OpenPlzApi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenPlzApi:Make">
+        <MSBuild Projects="packages\d23\OpenPlzApi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OpenPlzApi_UnitTest">
+        <MSBuild Projects="test\dunitx\OpenPlzApi.UnitTest.dproj"/>
+    </Target>
+    <Target Name="OpenPlzApi_UnitTest:Clean">
+        <MSBuild Projects="test\dunitx\OpenPlzApi.UnitTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenPlzApi_UnitTest:Make">
+        <MSBuild Projects="test\dunitx\OpenPlzApi.UnitTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OpenPlzApi;OpenPlzApi_UnitTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OpenPlzApi:Clean;OpenPlzApi_UnitTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OpenPlzApi:Make;OpenPlzApi_UnitTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

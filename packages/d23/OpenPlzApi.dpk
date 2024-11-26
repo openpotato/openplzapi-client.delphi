@@ -1,0 +1,48 @@
+package OpenPlzApi;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Client library for direct access to the OpenPLZ API'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  RESTComponents;
+
+contains
+  OpenPlzApi in '..\..\src\OpenPlzApi.pas',
+  OpenPlzApi.AT in '..\..\src\OpenPlzApi.AT.pas',
+  OpenPlzApi.CH in '..\..\src\OpenPlzApi.CH.pas',
+  OpenPlzApi.DE in '..\..\src\OpenPlzApi.DE.pas',
+  OpenPlzApi.LI in '..\..\src\OpenPlzApi.LI.pas',
+  OpenPlzApi.Factory in '..\..\src\OpenPlzApi.Factory.pas',
+  OpenPlzApi.JsonHelper in '..\..\src\OpenPlzApi.JsonHelper.pas',
+  OpenPlzApi.Pagination in '..\..\src\OpenPlzApi.Pagination.pas',
+  OpenPlzApi.ProblemDetails in '..\..\src\OpenPlzApi.ProblemDetails.pas',
+  OpenPlzApi.StrUtils in '..\..\src\OpenPlzApi.StrUtils.pas';
+
+end.
