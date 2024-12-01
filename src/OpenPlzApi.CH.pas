@@ -33,12 +33,14 @@ type
   TCanton = class(TOPlzApiEntity)
   private
     FKey: string;
-    FCode: string;
+    FHistoricalCode: string;
     FName: string;
+    FShortName: string;
   public
     property Key: string read FKey;
-    property Code: string read FCode;
+    property HistoricalCode: string read FHistoricalCode;
     property Name: string read FName;
+    property ShortName: string read FShortName;
   end;
 
   /// <summary>
@@ -47,12 +49,12 @@ type
   TCantonSummary = class(TOPlzApiEntity)
   private
     FKey: string;
-    FCode: string;
     FName: string;
+    FShortName: string;
   public
     property Key: string read FKey;
-    property Code: string read FCode;
     property Name: string read FName;
+    property ShortName: string read FShortName;
   end;
 
   /// <summary>
@@ -61,11 +63,15 @@ type
   TDistrict = class(TOPlzApiEntity)
   private
     FKey: string;
+    FHistoricalCode: string;
     FName: string;
+    FShortName: string;
     FCanton: TCantonSummary;
   public
     property Key: string read FKey;
+    property HistoricalCode: string read FHistoricalCode;
     property Name: string read FName;
+    property ShortName: string read FShortName;
     property Canton: TCantonSummary read FCanton;
   end;
 
@@ -76,9 +82,11 @@ type
   private
     FKey: string;
     FName: string;
+    FShortName: string;
   public
     property Key: string read FKey;
     property Name: string read FName;
+    property ShortName: string read FShortName;
   end;
 
   /// <summary>
@@ -87,12 +95,14 @@ type
   TCommune = class(TOPlzApiEntity)
   private
     FKey: string;
+    FHistoricalCode: string;
     FName: string;
     FShortName: string;
     FCanton: TCantonSummary;
     FDistrict: TDistrictSummary;
   public
     property Key: string read FKey;
+    property HistoricalCode: string read FHistoricalCode;
     property Name: string read FName;
     property ShortName: string read FShortName;
     property Canton: TCantonSummary read FCanton;
