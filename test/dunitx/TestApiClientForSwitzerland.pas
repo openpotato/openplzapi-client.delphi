@@ -79,8 +79,9 @@ begin
       begin
         Exists_Key := true;
         Assert.IsTrue(District.Name = 'District de la Broye');
+        Assert.IsTrue(District.HistoricalCode = '10107');
         Assert.IsTrue(District.Canton.Key = '10');
-        Assert.IsTrue(District.Canton.Code = 'FR');
+        Assert.IsTrue(District.Canton.ShortName = 'FR');
         Assert.IsTrue(District.Canton.Name = 'Fribourg / Freiburg');
         Break;
       end;
@@ -109,11 +110,12 @@ begin
       begin
         Exists_Key := true;
         Assert.IsTrue(Commune.Name = 'Châtillon (FR)');
+        Assert.IsTrue(Commune.HistoricalCode = '11419');
         Assert.IsTrue(Commune.ShortName = 'Châtillon (FR)');
         Assert.IsTrue(Commune.District.Key = '1001');
         Assert.IsTrue(Commune.District.Name = 'District de la Broye');
         Assert.IsTrue(Commune.Canton.Key = '10');
-        Assert.IsTrue(Commune.Canton.Code = 'FR');
+        Assert.IsTrue(Commune.Canton.ShortName = 'FR');
         Assert.IsTrue(Commune.Canton.Name = 'Fribourg / Freiburg');
         Break;
       end;
@@ -142,11 +144,12 @@ begin
       begin
         Exists_Key := true;
         Assert.IsTrue(Commune.Name = 'Auboranges');
+        Assert.IsTrue(Commune.HistoricalCode = '11680');
         Assert.IsTrue(Commune.ShortName = 'Auboranges');
         Assert.IsTrue(Commune.District.Key = '1002');
         Assert.IsTrue(Commune.District.Name = 'District de la Glâne');
         Assert.IsTrue(Commune.Canton.Key = '10');
-        Assert.IsTrue(Commune.Canton.Code = 'FR');
+        Assert.IsTrue(Commune.Canton.ShortName = 'FR');
         Assert.IsTrue(Commune.Canton.Name = 'Fribourg / Freiburg');
         Break;
       end;
@@ -182,7 +185,7 @@ begin
         Assert.IsTrue(Locality.District.Key = '112');
         Assert.IsTrue(Locality.District.Name = 'Bezirk Zürich');
         Assert.IsTrue(Locality.Canton.Key = '1');
-        Assert.IsTrue(Locality.Canton.Code = 'ZH');
+        Assert.IsTrue(Locality.Canton.ShortName = 'ZH');
         Assert.IsTrue(Locality.Canton.Name = 'Zürich');
         Break;
       end;
@@ -221,7 +224,7 @@ begin
         Assert.IsTrue(Street.District.Key = '112');
         Assert.IsTrue(Street.District.Name = 'Bezirk Zürich');
         Assert.IsTrue(Street.Canton.Key = '1');
-        Assert.IsTrue(Street.Canton.Code = 'ZH');
+        Assert.IsTrue(Street.Canton.ShortName = 'ZH');
         Assert.IsTrue(Street.Canton.Name = 'Zürich');
         Break;
       end;
@@ -263,7 +266,7 @@ begin
         Assert.IsTrue(Street.District.Key = '112');
         Assert.IsTrue(Street.District.Name = 'Bezirk Zürich');
         Assert.IsTrue(Street.Canton.Key = '1');
-        Assert.IsTrue(Street.Canton.Code = 'ZH');
+        Assert.IsTrue(Street.Canton.ShortName = 'ZH');
         Assert.IsTrue(Street.Canton.Name = 'Zürich');
         Break;
       end;
