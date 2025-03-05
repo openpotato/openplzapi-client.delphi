@@ -140,12 +140,12 @@ begin
 
     for var Commune in Communes do
     begin
-      if Commune.Key = '2061' then
+      if Commune.Key = '2063' then
       begin
         Exists_Key := true;
-        Assert.IsTrue(Commune.Name = 'Auboranges');
-        Assert.IsTrue(Commune.HistoricalCode = '11680');
-        Assert.IsTrue(Commune.ShortName = 'Auboranges');
+        Assert.IsTrue(Commune.Name = 'Billens-Hennens');
+        Assert.IsTrue(Commune.HistoricalCode = '14103');
+        Assert.IsTrue(Commune.ShortName = 'Billens-Hennens');
         Assert.IsTrue(Commune.District.Key = '1002');
         Assert.IsTrue(Commune.District.Name = 'District de la Glâne');
         Assert.IsTrue(Commune.Canton.Key = '10');
