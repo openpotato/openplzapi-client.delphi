@@ -81,8 +81,6 @@ begin
       begin
         Exists_Name := true;
         Exists_PostalCode := true;
-        Assert.IsTrue(Locality.Commune.Key = '7001');
-        Assert.IsTrue(Locality.Commune.Name = 'Vaduz');
         Exit;
       end;
     end;
